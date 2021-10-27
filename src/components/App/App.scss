@@ -1,0 +1,27 @@
+$green: green;
+$greenLight: #20a720;
+
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "header header"
+  "sidebar content";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+
+
+.content {
+  grid-area: content;
+}
+
+
+
+
+@import "../Header/header";
+@import "../Profile/profile";
+@import "../Sidebar/sidebar";
