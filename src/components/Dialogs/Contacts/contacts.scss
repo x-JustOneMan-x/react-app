@@ -1,0 +1,12 @@
+.dialogs__contacts {
+    padding: 30px 15px;
+}
+
+.contacts {
+    &__item {
+        padding: 15px 10px;
+        &.active {
+            font-size: 20px;
+        }
+    }
+}

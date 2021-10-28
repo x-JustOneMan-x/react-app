@@ -1,5 +1,6 @@
 import banner from '../../img/banner.jpg';
 import avatar from '../../img/avatar.jpg';
+import Posts from './Posts/posts';
 
 const Profile = () => {
     return(
@@ -33,20 +34,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="profile__posts">
-            <h2>My posts</h2>
-            <div className="profile__posts-add">
-              <textarea name="add-post" placeholder="your news">
-
-              </textarea>
-              <button type="submit" className="btn">Send</button>
-            </div>
-            <div className="profile__posts-list">
-              <div className="post__item">
-                POst 1
-              </div>
-            </div>
-          </div>
+        <Posts/>
       </div>
     );
 }

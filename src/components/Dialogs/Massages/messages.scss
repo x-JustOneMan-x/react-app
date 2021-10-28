@@ -1,0 +1,17 @@
+.dialogs__messages {
+    padding: 30px 15px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
