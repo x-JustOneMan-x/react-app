@@ -1,14 +1,14 @@
 
+import Message from './message/message';
 import './messages.scss';
-import contact from '../../../img/contact.jpg';
-import Message from './Message/message';
 
-const Messages = () => {
+const Messages = (props) => {
+
+    let messageElement = props.message.map(mess => <Message image={mess.image} text={mess.text} />);
+
     return (
         <div className="dialogs__messages">
-            <Message image={contact} text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, necessitatibus?" />
-            <Message image={contact} text="Hello!" />
-            <Message image={contact} text="How are you" />
+            {messageElement}
         </div>
     );
 }

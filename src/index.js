@@ -4,9 +4,11 @@ import './index.scss';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
+import state from './redux/states'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App states={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );

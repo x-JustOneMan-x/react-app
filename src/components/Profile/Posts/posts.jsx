@@ -1,9 +1,12 @@
-import Post from "./Post/post";
+import Post from './Post/post';
 import './posts.scss';
 
-const Posts = () => {
-    return(
-      <div className="profile__posts">
+const Posts = (props) => {
+
+  let PostElement = props.posts.map(post => <Post message={post.name} like={post.like} />);
+
+  return (
+    <div className="profile__posts">
       <h2>My posts</h2>
       <div className="profile__posts-add">
         <textarea name="add-post" placeholder="your news">
@@ -12,13 +15,10 @@ const Posts = () => {
         <button type="submit" className="btn">Send</button>
       </div>
       <div className="profile__posts-list">
-        <Post message="Hello! How are you?" like="12"/>
-        <Post message="Cool project, guys!" like="12"/>
-        <Post message="Hey, i`m working" like="12"/>
-        <Post message="Rest! I need some rest!!!" like="12"/>
+        {PostElement}
       </div>
     </div>
-    );
+  );
 }
 
 export default Posts;

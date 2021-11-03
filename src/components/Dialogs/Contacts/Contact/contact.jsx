@@ -1,10 +1,12 @@
+import { NavLink } from 'react-router-dom';
 
-const Contact = (props) => {
+const ContactItem = (props) => {
+    let url = '/dialogs/' + props.id;
     return (
         <div className={"contacts__item " + props.active} >
-            <span>{props.name}</span>
+            <span><NavLink to={url}>{props.name}</NavLink></span>
         </div>
     );
 }
 
-export default Contact;
+export default ContactItem;

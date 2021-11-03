@@ -1,14 +1,14 @@
 
-import Contact from './Contact/contact';
+import ContactItem from './Contact/contact';
 import './contacts.scss';
 
-const Contacts = () => {
+
+const Contacts = (props) => {
+    let contactElement = props.contact.map(contact => <ContactItem active={contact.active} name={contact.name} id={contact.id} />);
+
     return (
         <div className="dialogs__contacts">
-            <Contact active="active" name="Andrew" />
-            <Contact active="" name="DeNis" />
-            <Contact active="" name="Ami" />
-            <Contact active="" name="ms. Meme" />
+            {contactElement}
         </div>
     );
 }
