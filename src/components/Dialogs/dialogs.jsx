@@ -10,7 +10,7 @@ const Dialogs = (props) => {
     return (
         <div className="dialogs">
             <Contacts contact={props.data.contacts} />
-            <Messages message={props.data.messages} />
+            <Messages message={props.data.messages} newMessageText={props.data.newMessageText} dispatch={props.dispatch} />
         </div>
     );
 }

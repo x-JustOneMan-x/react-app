@@ -9,7 +9,7 @@ const Profile = (props) => {
         <img src={banner} alt="banner" />
       </div>
       <ProfileInfo />
-      <Posts posts={props.posts} />
+      <Posts posts={props.postsData.posts} dispatch={props.dispatch} newText={props.postsData.newPostText} />
     </div>
   );
 }
