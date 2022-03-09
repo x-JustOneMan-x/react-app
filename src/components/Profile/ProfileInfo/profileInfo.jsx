@@ -1,8 +1,11 @@
 import avatar from '../../../img/avatar.jpg';
-
+import banner from '../../../img/banner.jpg';
 const ProfileInfo = () => {
     return (
-        <div className="profile__info">
+        <div className="profile__info cloud__container">
+            <div className="profile__banner">
+                <img src={banner} alt="banner" />
+            </div>
             <div className="profile__avatar">
                 <img src={avatar} alt="avatar" />
             </div>

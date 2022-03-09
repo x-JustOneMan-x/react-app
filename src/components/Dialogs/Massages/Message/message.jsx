@@ -1,7 +1,8 @@
 
 const Message = (props) => {
+    let messClass = 'message message-' + props.path;
     return (
-        <div className="message">
+        <div className={messClass}>
             <div className="message__avatar">
                 <img src={props.image} alt="" />
             </div>
