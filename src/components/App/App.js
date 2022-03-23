@@ -5,9 +5,9 @@ import Profile from '../Profile/profile';
 import Dialogs from '../Dialogs/dialogs';
 import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import News from '../News/news';
-import Music from '../Music/music';
-import Settings from '../Settings/settings';
+// import News from '../News/news';
+// import Music from '../Music/music';
+// import Settings from '../Settings/settings';
 
 
 const App = (props) => {
@@ -18,11 +18,11 @@ const App = (props) => {
         <div className="page container">
           <Sidebar />
           <div className="main-content">
-            <Route path="/profile/" render={() => <Profile postsData={props.states.profilePage} settings={props.states.settings} dispatch={props.dispatch} />} />
-            <Route path="/dialogs/" render={() => <Dialogs data={props.states.dialogsPage} dispatch={props.dispatch} />} />
-            <Route path="/news/" component={News} />
+            <Route path="/profile/" render={() => <Profile store={props.store} />} />
+            <Route path="/dialogs/" render={() => <Dialogs store={props.store} />} />
+            {/* <Route path="/news/" component={News} />
             <Route path="/music/" component={Music} />
-            <Route path="/settings/" component={Settings} />
+            <Route path="/settings/" component={Settings} /> */}
           </div>
         </div>
       </div>

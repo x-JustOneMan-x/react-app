@@ -4,7 +4,10 @@ import './contacts.scss';
 
 
 const Contacts = (props) => {
-    let contactElement = props.contact.map(contact => <ContactItem name={contact.name} id={contact.id} avatar={contact.avatar} />);
+
+    let state = props.store.getState().dialogsPage;
+
+    let contactElement = state.contacts.map(cont => <ContactItem name={cont.name} id={cont.id} avatar={cont.avatar} />);
 
     return (
         <div className="dialogs__contacts">
